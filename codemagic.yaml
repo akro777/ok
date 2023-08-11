@@ -1,0 +1,10 @@
+workflows:
+  build:
+    name: Build
+    scripts:
+      # Build script
+      - flutter pub get
+      - flutter build ios --release --no-codesign
+    artifacts:
+      # Artifacts to publish
+      - build/ios/Release-iphoneos/*.ipa
